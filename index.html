@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Frontpage Feed Reader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="left-header">
+        <div class="sidebar-toggle-icon">
+          <i data-lucide="align-justify" class="layout-pick"></i>
+        </div>
+        <div class="logo">
+          <a href="index.html">
+            <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="#2563eb" />
+              <rect
+                x="8"
+                y="8"
+                width="11"
+                height="11"
+                rx="2.5"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+              />
+              <rect
+                x="13"
+                y="13"
+                width="11"
+                height="11"
+                rx="2.5"
+                fill="white"
+              />
+            </svg>
+          </a>
+          <span class="logo-text">Frontpage</span>
+        </div>
+        <nav class="main-nav" aria-label="Main">
+          <a href="#" class="nav-link active" aria-current="page">Feed</a>
+          <a href="#" class="nav-link">Digest</a>
+          <a href="#" class="nav-link">Discover</a>
+        </nav>
+      </div>
+      <div class="right-header">
+        <div class="search-article">
+          <i data-lucide="search" class="search-icon"></i>
+          <input
+            type="text"
+            placeholder="Search articles..."
+            aria-label="Search articles"
+            class="search-input"
+          />
+          <span class="slash">/</span>
+        </div>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
+        </button>
+        <button class="add-button" aria-label="Add feed">
+          <i data-lucide="plus" class="add-icon"></i>
+        </button>
+        <div class="profile">
+          <img
+            src="https://template.canva.com/EAGtrPC4Xiw/1/0/1600w-dUziP3tUikw.jpg"
+            alt="Your profile"
+          />
+        </div>
+      </div>
+    </header>
+
+    <aside class="side-bar">
+      <div class="cancel-sidebar">
+        <a href="index.html">
+          <svg class="logo-mark-sidebar" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#2563eb" />
+            <rect
+              x="8"
+              y="8"
+              width="11"
+              height="11"
+              rx="2.5"
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+            />
+            <rect x="13" y="13" width="11" height="11" rx="2.5" fill="white" />
+          </svg>
+        </a>
+        <i data-lucide="plus" class="cancel-icon"></i>
+      </div>
+      <nav class="side-bar-nav" aria-label="Main">
+        <a href="#" class="nav-link active" aria-current="page">Feed</a>
+        <a href="#" class="nav-link">Digest</a>
+        <a href="#" class="nav-link">Discover</a>
+      </nav>
+      <div class="bookmark">
+        <div class="all-item">
+          <div class="bookmark-item">
+            <i data-lucide="newspaper" class="bookmark-icon"></i>
+            <p>All items</p>
+          </div>
+          <p class="bookmark-num">0</p>
+        </div>
+        <div class="saved">
+          <div class="bookmark-item">
+            <i data-lucide="bookmark" class="bookmark-icon"></i>
+            <p>Saved</p>
+          </div>
+          <p class="bookmark-num">0</p>
+        </div>
+      </div>
+
+      <div class="category">
+        <p class="cate-text">CATEGORIES</p>
+        <div class="category-list"></div>
+      </div>
+
+      <div class="feed-healthy">
+        <i data-lucide="circle-check" class="check"></i>
+        <p>All feeds healthy</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="feed-header">
+        <div class="order1">
+          <p class="all-item-text">ALL ITEMS</p>
+          <div class="unread-all"><p>0 unread</p></div>
+        </div>
+        <div class="order2">
+          <div class="layout-toggle" role="group" aria-label="Layout">
+            <button
+              class="feed-order active-list clicked"
+              aria-label="List layout"
+              aria-pressed="true"
+              id="list-order"
+            >
+              <i data-lucide="list" class="layout-pick"></i>
+            </button>
+            <button
+              class="feed-order active-grid"
+              aria-label="Grid layout"
+              aria-pressed="false"
+              id="grid-order"
+            >
+              <i data-lucide="layout-grid" class="layout-pick"></i>
+            </button>
+          </div>
+          <button class="newest">
+            <i data-lucide="arrow-down-wide-narrow" class="newest-icon"></i>
+            <span>Newest</span>
+          </button>
+          <button class="refresh">
+            <i data-lucide="refresh-cw" class="refresh-icon"></i>
+            <span>Refresh</span>
+          </button>
+          <button class="mark-all"><span>Mark all read</span></button>
+        </div>
+      </div>
+
+      <!-- <div class="new-pop-up">
+        <i data-lucide="arrow-up" class="arrow-up"></i>
+        <p>5 new items since your last visit</p>
+      </div> -->
+
+      <div class="feed-body">
+        <h2 class="feed-day">TODAY</h2>
+        <div class="feed-list"></div>
+
+        <h2 class="feed-day">YESTERDAY</h2>
+        <div class="feed-list"></div>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/lucide@0.469.0"></script>
+    <script type="module" src="/scripts.js"></script>
+  </body>
+</html>
